@@ -1,0 +1,41 @@
+Algoritmo NonoTech
+	// a (hardware) b (perifericos) c (insumos), a1(efectivo) b2 (tarjeta)
+	definir user como caracter;
+	definir descuento, recargo, cant, precioU, subtotal, costototal, costodeenv, a, b, c, a1, b2 Como Real;
+	escribir "ingrese su nombre para entregarle en ticket de compra";
+	leer user;
+	escribir "gracias señor/a", user, " continuemos con su  pedido";
+	escribir "ingrese la cantidad de productos";
+	leer cant;
+	escribir "ingrese la cantidad de productos";
+	leer precioU;
+	subtotal= precioU * cant;
+	escribir "el subtotal es de: ", subtotal;
+	leer a;
+	si a >= 50000 entonces
+		escribir "se aplicara un descuento del 15% sobre el subtotal";
+	sino 
+		escribir "pero si es igual o menor solo se aplicara un descuento de 5%";
+	FinSi
+	leer b;
+	escribir "se aplicara un descuento del 10% sobre el subtotal sin importar el monto";
+	leer c;
+	si c >= 10 entonces
+		escribir "se aplicara un descuento del 5% si llevas 10 de lo contrario no se aplicara descuento";
+	FinSi
+	leer a1;
+	escribir "si es efectivo se hace un descuento del 10%";
+	leer b2;
+	escribir " si es targeta el descuento sera de 15%";
+	si costodeenv < 20000 entonces 
+		escribir "se sumara un costo de 25000 por el envio";
+	sino 
+		escribir "no se sumara un costo de envio";
+	FinSi
+	leer user;
+	leer subtotal;
+	leer descuento;
+	leer recarga;
+	leer costodeenv;
+	escribir "el costo total sera de: ",costototal;
+FinAlgoritmo
